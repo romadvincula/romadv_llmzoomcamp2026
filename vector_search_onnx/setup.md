@@ -27,3 +27,7 @@ wget https://raw.githubusercontent.com/DataTalksClub/llm-zoomcamp/main/01-agenti
 embed = Embedder("models/Xenova/bge-base-en-v1.5")
 vectors = embed.encode("your text here")
 print(vectors.shape)
+
+7. Add gitsource in uv for the homework
+
+uv add gitsource
