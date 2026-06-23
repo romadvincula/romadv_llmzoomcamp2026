@@ -219,3 +219,6 @@ __marimo__/
 
 # Mac Os
 .DS_Store
+
+# Models
+models/
