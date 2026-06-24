@@ -220,5 +220,7 @@ __marimo__/
 # Mac Os
 .DS_Store
 
+temp.txt
+
 # Models
 models/
