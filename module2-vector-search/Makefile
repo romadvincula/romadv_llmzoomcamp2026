@@ -20,4 +20,20 @@ postgres: network
 		postgres:17
 
 cleanup-docker:
+	docker rm grafana
+	docker rm course-assistant-pg
 	docker network rm monitoring
+
+db-init:
+	uv run python db_init.py
+
+dashboard:
+	uv run streamlit run dashboard.py --server.port 8502
+
+grafana:
+	docker run -it \
+		--name grafana \
+		--network monitoring \
+		-p 3000:3000 \
+		-v grafana_data:/var/lib/grafana \
+		grafana/grafana
